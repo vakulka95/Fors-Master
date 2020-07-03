@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled.eot');
+    src: local('Neuron Angled'), local('NeuronAngled'),
+        url('NeuronAngled.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled.woff2') format('woff2'),
+        url('NeuronAngled.woff') format('woff'),
+        url('NeuronAngled.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled-XlIt.eot');
+    src: local('Neuron Angled ExtraLight Italic'), local('NeuronAngled-XlIt'),
+        url('NeuronAngled-XlIt.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled-XlIt.woff2') format('woff2'),
+        url('NeuronAngled-XlIt.woff') format('woff'),
+        url('NeuronAngled-XlIt.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled-DbIt.eot');
+    src: local('Neuron Angled DemiBold Italic'), local('NeuronAngled-DbIt'),
+        url('NeuronAngled-DbIt.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled-DbIt.woff2') format('woff2'),
+        url('NeuronAngled-DbIt.woff') format('woff'),
+        url('NeuronAngled-DbIt.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled-It.eot');
+    src: local('Neuron Angled Italic'), local('NeuronAngled-It'),
+        url('NeuronAngled-It.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled-It.woff2') format('woff2'),
+        url('NeuronAngled-It.woff') format('woff'),
+        url('NeuronAngled-It.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled-Bd.eot');
+    src: local('Neuron Angled Bold'), local('NeuronAngled-Bd'),
+        url('NeuronAngled-Bd.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled-Bd.woff2') format('woff2'),
+        url('NeuronAngled-Bd.woff') format('woff'),
+        url('NeuronAngled-Bd.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled-HvIt.eot');
+    src: local('Neuron Angled Heavy Italic'), local('NeuronAngled-HvIt'),
+        url('NeuronAngled-HvIt.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled-HvIt.woff2') format('woff2'),
+        url('NeuronAngled-HvIt.woff') format('woff'),
+        url('NeuronAngled-HvIt.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled-Xb.eot');
+    src: local('Neuron Angled ExtraBold'), local('NeuronAngled-Xb'),
+        url('NeuronAngled-Xb.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled-Xb.woff2') format('woff2'),
+        url('NeuronAngled-Xb.woff') format('woff'),
+        url('NeuronAngled-Xb.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled-Lt.eot');
+    src: local('Neuron Angled Light'), local('NeuronAngled-Lt'),
+        url('NeuronAngled-Lt.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled-Lt.woff2') format('woff2'),
+        url('NeuronAngled-Lt.woff') format('woff'),
+        url('NeuronAngled-Lt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled-Db.eot');
+    src: local('Neuron Angled DemiBold'), local('NeuronAngled-Db'),
+        url('NeuronAngled-Db.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled-Db.woff2') format('woff2'),
+        url('NeuronAngled-Db.woff') format('woff'),
+        url('NeuronAngled-Db.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled-XbIt.eot');
+    src: local('Neuron Angled ExtraBold Italic'), local('NeuronAngled-XbIt'),
+        url('NeuronAngled-XbIt.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled-XbIt.woff2') format('woff2'),
+        url('NeuronAngled-XbIt.woff') format('woff'),
+        url('NeuronAngled-XbIt.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled-BkIt.eot');
+    src: local('Neuron Angled Black Italic'), local('NeuronAngled-BkIt'),
+        url('NeuronAngled-BkIt.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled-BkIt.woff2') format('woff2'),
+        url('NeuronAngled-BkIt.woff') format('woff'),
+        url('NeuronAngled-BkIt.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled-Bk.eot');
+    src: local('Neuron Angled Black'), local('NeuronAngled-Bk'),
+        url('NeuronAngled-Bk.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled-Bk.woff2') format('woff2'),
+        url('NeuronAngled-Bk.woff') format('woff'),
+        url('NeuronAngled-Bk.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled-LtIt.eot');
+    src: local('Neuron Angled Light Italic'), local('NeuronAngled-LtIt'),
+        url('NeuronAngled-LtIt.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled-LtIt.woff2') format('woff2'),
+        url('NeuronAngled-LtIt.woff') format('woff'),
+        url('NeuronAngled-LtIt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled-BdIt.eot');
+    src: local('Neuron Angled Bold Italic'), local('NeuronAngled-BdIt'),
+        url('NeuronAngled-BdIt.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled-BdIt.woff2') format('woff2'),
+        url('NeuronAngled-BdIt.woff') format('woff'),
+        url('NeuronAngled-BdIt.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled-Xl.eot');
+    src: local('Neuron Angled ExtraLight'), local('NeuronAngled-Xl'),
+        url('NeuronAngled-Xl.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled-Xl.woff2') format('woff2'),
+        url('NeuronAngled-Xl.woff') format('woff'),
+        url('NeuronAngled-Xl.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neuron Angled';
+    src: url('NeuronAngled-Hv.eot');
+    src: local('Neuron Angled Heavy'), local('NeuronAngled-Hv'),
+        url('NeuronAngled-Hv.eot?#iefix') format('embedded-opentype'),
+        url('NeuronAngled-Hv.woff2') format('woff2'),
+        url('NeuronAngled-Hv.woff') format('woff'),
+        url('NeuronAngled-Hv.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
