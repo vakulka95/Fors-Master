@@ -10,7 +10,8 @@ html{
 
 body{
     font-family: 'Neuron Angled', sans-serif;
-    background-color: rgb(229, 229, 229);;
+    background-color: rgb(229, 229, 229);
+    position: relative;
 }
 
 ul, li{
@@ -28,7 +29,7 @@ ul, li{
 /* HEADER-TOP */
 
 .header{
-    background-image: linear-gradient(90deg, #201D1D 15.16%, rgba(32, 29, 29, 0) 99.85%), url('/images/background.png');
+    background-image: linear-gradient(90deg, #201D1D 15.16%, rgba(32, 29, 29, 0) 99.85%), url('../images/background.png');
     background-repeat: no-repeat;
     position: relative;
     background-position: center;
@@ -96,19 +97,15 @@ ul, li{
     border-bottom: 2px solid #E8363A;
 }
 
-.button{
-    margin: 12px 0;
-}
-
 .button__link{
+    font-family: 'Neuron Angled', sans-serif;
     font-style: italic;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 40px;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.12em;
 
-    padding: 14.5px 33px;
-    text-align: center;
+    padding: 5px 33px;
 
     border: 3px solid #E8363A;
     background-color: #201D1D;
@@ -116,6 +113,9 @@ ul, li{
 
     text-transform: uppercase;
     text-decoration: none;
+
+    cursor: pointer;
+    outline: none;
 }
 
 
@@ -170,11 +170,11 @@ ul, li{
     opacity: 0.8;
 }
 
-.header__about-button-link, .forsmaster-button{
+.header__about-button-link, .forsmaster-button, .request-button{
     background-color: #E8363A;
 }
 
-.header__about-button-link:hover, .forsmaster-button:hover{
+.header__about-button-link:hover, .forsmaster-button:hover, .request-button:hover{
     box-shadow: 0 7px 20px #E8363A;
 }
 
@@ -263,9 +263,12 @@ ul, li{
 }
 
 .repair__button-link{
+    font-size: 20px;
+    line-height: 40px;
+
     background-color: #fff;
     color: #E8363A;
-    padding: 15px 70px;
+    padding: 5px 70px;
 }
 
 .images{
@@ -361,9 +364,8 @@ ul, li{
     background: linear-gradient(90deg, #201D1D 15%, rgba(32, 29, 29, 0) 120%), url('../images/background-forsmaster.png');
     background-color: #201D1D;
     background-repeat: no-repeat;
-    padding: 140px 0;
+    padding: 165px 0;
     background-position: 500px;
-    padding-top: 25px;
 }
 
 .forsmaster__title{
@@ -587,3 +589,147 @@ span{
     top: 11px;
 }
 
+/* Request */
+
+.filter{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 50;
+    display: none;
+}
+
+.request{
+    display: none;
+    position: fixed;
+    width: 42%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 51;
+    left: 30%;
+    text-align: center;
+}
+
+.request__close{
+    text-align: end;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.fa-times{
+    color: #E8363A;
+    cursor: pointer;
+}
+
+
+.request__container{
+    margin: 0 auto;
+}
+
+.request-title{
+    font-style: italic;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 35px;
+
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: #262323;
+    padding: 0 36px;
+}
+
+.request__phone{
+    margin-top: 30px;
+    width: 100%;
+    padding: 40px 0;
+    background-color: #F3F3F3;
+
+}
+.request-phone{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 60px;
+
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    
+    color: #262323;
+
+}
+
+
+.request-text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 46px;
+
+    letter-spacing: 0.04em;
+
+    color: #262323;
+    padding: 26px 36px 26px;
+}
+
+/* Form */
+
+.form{
+    background-color: #F3F3F3;
+    padding: 10px 56px;
+/* 
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 40px; */
+}
+
+.title-input{
+    text-align: left;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 46px;
+
+    letter-spacing: 0.04em;
+
+    color: #262323;
+}
+
+.input{
+    font-family: 'Neuron Angled', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 46px;
+    
+    letter-spacing: 0.04em;
+    
+    color: #B4AFAF;
+    padding: 0 22px;
+    width: 100%;
+
+    border: 1px solid #E0E0E0;
+    outline: none;
+}
+
+.form-btn{
+    width: 70%;
+    margin: 20px 0;
+}
+
+.request-form__text{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: #696868;
+    padding: 0 133px;
+}
