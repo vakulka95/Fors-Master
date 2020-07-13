@@ -14,6 +14,11 @@ body{
     position: relative;
 }
 
+.burger{
+    display: none;
+    margin: auto 0;
+}
+
 ul, li{
     display: block;
 }
@@ -26,6 +31,44 @@ ul, li{
     z-index: 10;
 }
 
+
+
+
+/* mobile menu */
+.mob__block{
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: #201D1D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    text-align: center;
+
+    padding-top: 100px;
+
+
+}
+.mob__link{
+    font-family: 'Neuron Angled', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 55px;
+
+    letter-spacing: 0.02em;
+
+    border: none;
+
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+
+
 /* HEADER-TOP */
 
 .header{
@@ -33,6 +76,7 @@ ul, li{
     background-repeat: no-repeat;
     position: relative;
     background-position: center;
+    background-size: cover;
     padding-top: 30px;
     height: 100%;
 }
@@ -53,6 +97,7 @@ ul, li{
     top: 10;
     width: 100%;
     z-index: 15;
+    padding: 5px 0;
 }
 
 .header__top-inner{
@@ -124,10 +169,10 @@ ul, li{
     color: #fff;
 }
 
-/* Header__content */
 
 .header__content{
     padding-bottom: 55px;
+    position: relative;
 }
 
 .header__content-inner{
@@ -170,16 +215,15 @@ ul, li{
     opacity: 0.8;
 }
 
-.header__about-button-link, .forsmaster-button, .request-button{
+.request-button, .main-button{
     background-color: #E8363A;
 }
 
-.header__about-button-link:hover, .forsmaster-button:hover, .request-button:hover{
+.request-button:hover, .main-button:hover{
     box-shadow: 0 7px 20px #E8363A;
 }
 
 
-/* Our services */
 
 .services{
     background-color: #E5E5E5;
@@ -204,8 +248,10 @@ ul, li{
 
     padding-bottom: 17px;
 }
+.our-services-title{
+    padding-top: 100px;
+}
 
-/* repair block */
 
 .repair{
     display: flex;
@@ -213,6 +259,7 @@ ul, li{
     justify-content: space-between;
     margin-bottom: 70px;
 }
+
 
 .border-image{
     height: 100%;
@@ -297,7 +344,6 @@ ul, li{
     top: -121px;
 }
 
-/* piezo */
 .images__bosch-piezo{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -321,7 +367,6 @@ ul, li{
     padding-left: 10px;
 }
 
-/* delphi */
 
 .delphi-firm{
     padding-left: 32px;
@@ -330,12 +375,6 @@ ul, li{
 .delphi-detail{
     top: -150px;
     left: 260px;
-}
-
-/* siemens */
-
-.siemens-firm{
-    padding-right: 30px;
 }
 
 .siemens-detail{
@@ -347,7 +386,6 @@ ul, li{
     width: 70%;
 }
 
-/* Denso */
 
 .denso-firm{
     padding-left: 20px;
@@ -358,14 +396,14 @@ ul, li{
     left: 205px;
 }
 
-/* Forsmaster */
 
 .forsmaster{
     background: linear-gradient(90deg, #201D1D 15%, rgba(32, 29, 29, 0) 120%), url('../images/background-forsmaster.png');
     background-color: #201D1D;
     background-repeat: no-repeat;
     padding: 165px 0;
-    background-position: 500px;
+    background-position: 300px;
+    background-size: cover;
 }
 
 .forsmaster__title{
@@ -405,7 +443,6 @@ span{
     width: 65%;
 }
 
-/* Benefits */
 
 .benefits{
     padding-bottom: 172px;
@@ -476,16 +513,15 @@ span{
     color: #414141;
 }
 
-/* Workflow */
 
 .workflow{
     background-color: #F3F3F3;
     padding: 25px 0 135px;
-
 }
 
 .workflow__content{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .workflow__stage{
@@ -497,11 +533,12 @@ span{
 }
 
 .stage-circle{
+    display: flex;
+    justify-content: center;
     font-weight: 950;
     font-size: 46px;
     background-color: #E8363A;
     border-radius: 50%;
-    padding: 26px 37px 26px;
     line-height: 40px;
     height: 96px;
     width: 96px;
@@ -543,10 +580,13 @@ span{
     color: #414141;
 
     width: 80%;
-
 }
 
-/* Footer */
+.workflow-btn{
+    display: block;
+    margin: 50px auto 0;
+}
+
 
 .footer{
     background-color: #201D1D;
@@ -557,8 +597,13 @@ span{
     justify-content: space-between;
 }
 
+.iframe100{
+    width: 50%;
+}
+
 .footer__contacts{
     margin: auto 0;
+    padding: 60px 0;
 }
 
 .contacts-list{
@@ -581,6 +626,12 @@ span{
 .contact-inf{
     display: inline-block;
     margin-left: 37px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-inf:hover{
+    text-decoration: underline;
 }
 
 .contact-img{
@@ -589,7 +640,7 @@ span{
     top: 11px;
 }
 
-/* Request */
+
 
 .filter{
     background-color: rgba(0, 0, 0, 0.7);
@@ -604,11 +655,13 @@ span{
     display: none;
     position: fixed;
     width: 42%;
-    height: 100%;
+    height: 70%;
     background-color: #fff;
     z-index: 51;
     left: 30%;
     text-align: center;
+    overflow-y: scroll;
+    margin: 5% 0;
 }
 
 .request__close{
@@ -620,6 +673,7 @@ span{
 .fa-times{
     color: #E8363A;
     cursor: pointer;
+    margin-right: 15px;
 }
 
 
@@ -629,34 +683,31 @@ span{
 
 .request-title{
     font-style: italic;
-    font-weight: 800;
-    font-size: 25px;
-    line-height: 35px;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 30px;
 
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
     color: #262323;
-    padding: 0 36px;
+    padding: 0 36px 15px;
 }
 
 .request__phone{
-    margin-top: 30px;
     width: 100%;
-    padding: 40px 0;
+    padding: 5px 0;
     background-color: #F3F3F3;
 
-}
-.request-phone{
     font-style: normal;
     font-weight: 600;
-    font-size: 30px;
-    line-height: 60px;
+    font-size: 20px;
+    line-height: 40px;
 
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    
+
     color: #262323;
 
 }
@@ -665,8 +716,8 @@ span{
 .request-text{
     font-style: normal;
     font-weight: normal;
-    font-size: 28px;
-    line-height: 46px;
+    font-size: 20px;
+    line-height: 23px;
 
     letter-spacing: 0.04em;
 
@@ -674,16 +725,15 @@ span{
     padding: 26px 36px 26px;
 }
 
-/* Form */
 
 .form{
     background-color: #F3F3F3;
-    padding: 10px 56px;
-/* 
+    padding: 25px 56px;
+
     font-style: normal;
     font-weight: 500;
-    font-size: 25px;
-    line-height: 40px; */
+    font-size: 40px;
+    line-height: 60px;
 }
 
 .title-input{
@@ -691,8 +741,8 @@ span{
 
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 46px;
+    font-size: 18px;
+    line-height: 20px;
 
     letter-spacing: 0.04em;
 
@@ -703,33 +753,1014 @@ span{
     font-family: 'Neuron Angled', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 26px;
+    font-size: 18px;
     line-height: 46px;
     
     letter-spacing: 0.04em;
     
-    color: #B4AFAF;
+    color: #000000;
     padding: 0 22px;
     width: 100%;
 
     border: 1px solid #E0E0E0;
     outline: none;
+    margin-bottom: 25px;
 }
 
 .form-btn{
     width: 70%;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .request-form__text{
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 26px;
 
     text-align: center;
     letter-spacing: 0.04em;
 
     color: #696868;
-    padding: 0 133px;
+    padding: 25px 133px;
 }
+
+
+@media only screen and (max-width: 1199px){
+    .container{
+        width: 980px;
+    }
+    .menu{
+        margin: 5px 20px 0;
+    }
+    .menu__list-item{
+        margin-right: 20px;
+    }
+    .logo__img{
+        width: 160px;
+    }
+    .repair__about{
+        width: 45%;
+    }
+    .bosch-firm{
+        width: 210px;
+    }
+    .bosch-detail{
+        top: -151px;
+    }
+    .delphi-detail{
+        left: 230px;
+    }
+    .image-bosch-piezo{
+        width: 220px;
+    }
+    .iframe100{
+        width: 100%;
+    }
+    .footer{
+        padding: 15px 0 0;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .container{
+        width: 100%;
+    }
+    .menu{
+        display: none;
+    }
+    .header__btn{
+        display: none;
+    }
+    .header__top{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .header__top-inner{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 15px 30px 0;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+        position: relative;
+        border: 2px solid #E8363A;
+        width: 40px;
+        height: 40px;
+    }
+
+    .burger-line{
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 20%;
+        transition: .3 all linear;
+    }
+    .burger-line-first{
+        top: 10px;
+    }
+
+    .burger-line-second, .burger-line-third{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .burger-line-fourth{
+        bottom: 10px;
+    }
+    .burger-active .burger-line-first{
+        top: 17px;
+        opacity: 0;
+    }
+    .burger-active .burger-line-fourth{
+        bottom: 17px;
+        opacity: 0;
+    }
+    .burger-active .burger-line-second{
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .burger-active .burger-line-third{
+        transform: translateY(-50%) rotate(-45deg);
+    }
+
+    
+    .header::before{
+        display: none;
+    }
+    .header{
+        background-image: 
+            linear-gradient(to bottom, #201D1D 6%, transparent 50%), 
+            linear-gradient(to top, #201D1D 15%, transparent 40%),
+            url('../images/mobile/mob_background.png');
+    }
+
+    .header__content-graphic{
+        display: none;
+    }
+    .header__about{
+        width: 100%;
+        text-align: center;
+        padding: 0 35px;
+    }
+    .header__about-title{
+        font-size: 60px;
+        line-height: 80px;
+    }
+    
+    .button{
+        width: 100%;
+    }
+    .btn-about{
+        width: 100%;
+    }
+    .border-image{
+        display: none;
+    } 
+    .repair__about{
+        width: 100%;
+        padding: 38px 35px;
+        margin-left: 0;
+    }
+    .text-about{
+        font-size: 18px;
+    }
+    .repair__button-link{
+        width: 100%;
+    }
+    .our-services-title{
+        margin-bottom: 30px;
+        position: relative;
+    }
+    .our-services-title::after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 200%;
+        left: 0;
+        top: -125px;
+        z-index: -50;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .services{
+        padding-bottom: 0;
+    }
+
+    .repair{
+        margin-top: 350px;
+        position: relative;
+        box-shadow: 0 60px 1px rgba(255, 255, 255, 0.5);
+    }
+    .repair:last-child{
+        margin-bottom: 0;
+        box-shadow: none;
+    }
+    .repair__image{
+        position: absolute;
+        top: -200px;
+    }
+    
+    .image-detail{
+        position: absolute;
+        left: 600px;
+    }
+    .bosch-detail{
+        width: 250px;
+        top: -152px;
+        left: 600px;
+    }
+    .bosch-firm{
+        width: 400px;
+        margin-left: 50px;
+    }
+    .bosch-piezo-detail{
+        left: 600px;
+    }
+    .images__bosch-piezo{
+        position: absolute;
+        left: 50px;
+    }
+    .image-bosch-piezo{
+        width: 400px;
+        padding: 0;
+    }
+    .bosch-piezo{
+        font-size: 40px;
+        margin-top: -10px;
+        font-size: 55px;
+    }
+
+    .delphi-firm{
+        width: 350px;
+        padding-left: 80px;
+    }
+    .delphi-detail{
+        top: -120px;
+    }
+    .siemens-detail{
+        top: -120px;
+    }
+    .siemens-firm{
+        width: 500px;
+        margin-left: 60px;
+    }
+    .denso-detail{
+        top: -120px;
+    }
+    .denso-firm{
+        width: 350px;
+        margin-left: 45px;
+    }
+
+    .forsmaster__inner{
+        width: 100%;
+    }
+    .forsmaster{
+        background: linear-gradient(to top, #201D1D 60%, transparent 80%), url('../images/background-forsmaster.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 265px 0 50px 0;
+        background-position: center;
+    }
+    .forsmaster__inner{
+        padding: 0 35px;
+    }
+    .forsmaster__title{
+        font-size: 36px;
+    }
+    .forsmaster__text{
+        width: 100%;
+    }
+    .main-button{
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .benefits{
+        padding-bottom: 20px;
+        background-color: #fff;
+    }
+    .benefits__inner{
+        padding: 0 35px;
+    }
+    .our-benefit{
+        width: 100%;
+        margin: 0 auto 50px;
+    }
+
+    .benefit-image{
+        margin-bottom: 20px;
+    }
+    .our-benefit__text{
+        width: 100%;
+    }
+
+    .benefit-title{
+        margin-bottom: 15px;
+    }
+
+    .workflow__inner{
+        padding: 0 35px;
+    }
+
+    .dotted{
+        display: none;
+    }
+    .workflow__stage{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    .workflow__content{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+    .workflow__header-stage{
+        display: flex;
+        justify-content: center;
+    }
+    .workflow__text{
+        width: 100%;
+    }
+    
+    .footer__inner{
+        flex-direction: column;
+    }
+    .footer__map{
+        align-self: center;
+        display: block;
+        min-width: 768px;
+        max-width: 991px;
+    }
+    .logo__footer{
+        width: 300px;
+    }
+    .iframe100{
+        width: 600px;
+    }
+    .footer__contacts{
+        padding: 30px 35px;
+    }
+    .request{
+        margin: 10% auto;
+        width: 50%;
+        height: 60%;
+    }
+    .request-text{
+        padding: 20px 0;
+    }
+    .request-title{
+        padding: 20px 35px;
+    }
+    .request-button{
+        width: 100%;
+    }
+    .iframe100{
+        width: 100%;
+        height: 600px;
+    }
+    .fa-times{
+        margin-right: 0;
+    }
+    .request-form__text{
+        padding: 35px;
+    }
+    
+}
+@media only screen and (max-width: 860px){
+ 
+    .image-detail{
+        position: absolute;
+        left: 600px;
+    }
+    .bosch-detail{
+        width: 250px;
+        top: -152px;
+        left: 500px;
+    }
+    .bosch-firm{
+        width: 350px;
+        margin-left: 50px;
+    }
+    .bosch-piezo-detail{
+        left: 530px;
+    }
+    .images__bosch-piezo{
+        position: absolute;
+        left: 50px;
+    }
+    .image-bosch-piezo{
+        width: 350px;
+        padding: 0;
+    }
+    .bosch-piezo{
+        font-size: 35px;
+        margin-top: -10px;
+        font-size: 55px;
+    }
+
+    .delphi-firm{
+        width: 350px;
+        padding-left: 80px;
+    }
+    .delphi-detail{
+        top: -120px;
+        left: 550px;
+    }
+    .siemens-detail{
+        left: 500px;
+        top: -120px;
+    }
+    .siemens-firm{
+        width: 500px;
+        margin-left: 80px;
+    }
+    .denso-detail{
+        left: 500px;
+        top: -120px;
+    }
+    .denso-firm{
+        width: 350px;
+        margin-left: 45px;
+    }
+}
+
+@media only screen and (max-width: 780px){
+
+    .bosch-detail{
+        width: 250px;
+        top: -152px;
+        left: 470px;
+    }
+    .bosch-piezo-detail{
+        left: 470px;
+    }
+    .delphi-detail{
+        top: -120px;
+        left: 500px;
+    }
+    .siemens-detail{
+        left: 470px;
+        top: -120px;
+    }
+    .siemens-firm{
+        width: 100%;
+        height: 100%;
+    }
+    .denso-detail{
+        left: 470px;
+        top: -120px;
+    }
+    .repair__image{
+        height: 70px;
+        width: 300px;
+        margin: 0 auto;
+    }
+    
+}
+
+
+@media only screen and (max-width: 720px){
+
+    .image-detail{
+        left: 440px;
+        top: -120px;
+    }   
+    .container__footer{
+        padding: 0;
+    }
+    .bosch-firm{
+        width: 320px;
+        margin-left: 50px;
+    }
+    .bosch-detail{
+        width: 250px;
+        top: -152px;
+        left: 400px;
+    }
+
+    .image-bosch-piezo{
+        width: 320px;
+        padding: 0;
+    }
+    .bosch-piezo{
+        font-size: 45px;
+        margin-top: -10px;
+    }
+    .delphi-firm{
+        width: 320px;
+        padding-left: 80px;
+    }
+    .denso-firm{
+        width: 320px;
+        margin-left: 45px;
+    }
+    
+    .denso-detail{
+        left: 430px;
+    }
+    .footer__contacts{
+        padding: 30px 60px;
+    }
+    
+}
+
+@media only screen and (max-width: 680px){
+  
+    .bosch-firm{
+        width: 320px;
+        margin-left: 50px;
+    }
+    .bosch-detail{
+        width: 250px;
+        top: -152px;
+        left: 350px;
+    }
+
+    .image-bosch-piezo{
+        width: 320px;
+        padding: 0;
+    }
+    .bosch-piezo{
+        font-size: 45px;
+        margin-top: -10px;
+    }
+    .bosch-piezo-detail{
+        left: 370px;
+    }
+    .delphi-firm{
+        width: 320px;
+        padding-left: 80px;
+    }
+    .delphi-detail{
+        top: -120px;
+        left: 400px;
+    }
+    .siemens-detail{
+        left: 370px;
+        top: -120px;
+    }
+    .siemens-firm{
+        width: 100%;
+        height: 100%;
+    }
+    .denso-firm{
+        width: 250px;
+        margin-left: 45px;
+    }
+    .denso-detail{
+        left: 350px;
+    }
+    .mob__link{
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 43px;
+    }
+
+
+   
+    
+}
+
+
+@media only screen and (max-width: 575px){
+    .our-services-title{
+        position: relative;
+    }
+    .our-services-title::after{
+        height: 230%;
+    }
+    .repair{
+        box-shadow: 0 50px 1px rgba(255, 255, 255, 0.5);
+        margin-top: 325px;
+    }
+  
+    .bosch-firm{
+        width: 270px;
+        margin-left: 50px;
+        margin-top: 40px;
+    }
+    .bosch-detail{
+        width: 210px;
+        top: -98px;
+        left: 310px;
+    }
+
+    .image-bosch-piezo{
+        width: 270px;
+        padding: 0;
+    }
+    .bosch-piezo{
+        font-size: 40px;
+        margin-top: -10px;
+        padding-left: 0;
+    }
+    .bosch-piezo-detail{
+        width: 210px;
+        left: 310px;
+        top: -105px
+    }
+    .delphi-firm{
+        width: 290px;
+        padding-left: 80px;
+    }
+    .delphi-detail{
+        top: -120px;
+        left: 330px;
+    }
+    .siemens-detail{
+        left: 300px;
+        width: 210px;
+        top: -120px;
+    }
+    .siemens-firm{
+        width: 190px;
+        margin-right: 40px;
+        margin-left: 0;
+    }
+    .denso-firm{
+        width: 210px;
+        margin-left: 45px;
+        margin-top: 30px;
+    }
+    .denso-detail{
+        left: 290px;
+        width: 190px;
+        top: -90px;
+    }
+    
+    .forsmaster{
+        background-size: 100%;
+        padding: 0 15px;
+        background-size: cover;
+    }
+    .forsmaster{
+        background: linear-gradient(to top, #201D1D 60%, transparent 80%), url('../images/background-forsmaster.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 265px 0 35px 0;
+        background-position: center;
+    }
+    .repair__button-link{
+        width: 100%;
+    }
+    .forsmaster__title{
+        line-height: 60px;
+        font-size: 40px;
+    }
+    .workflow{
+        padding-bottom: 50px;
+    }
+    .logo__footer{
+        width: 300px;
+    }
+    .mob__link{
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 43px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .our-services-title::after{
+        height: 240%;
+    }
+    .header__about-title{
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .bosch-firm{
+        width: 230px;
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+    .bosch-detail{
+        width: 190px;
+        top: -68px;
+        left: 260px;
+    }
+
+    .image-bosch-piezo{
+        width: 230px;
+        padding: 0;
+        margin-top: 40px;
+    }
+    .bosch-piezo{
+        font-size: 35px;
+        margin-top: -10px;
+        padding-left: 0;
+    }
+    .bosch-piezo-detail{
+        width: 190px;
+        left: 260px;
+        top: -75px
+    }
+    .delphi-firm{
+        width: 220px;
+        padding-left: 70px;
+        margin-top: 40px;
+    }
+    .delphi-detail{
+        top: -85px;
+        left: 260px;
+        width: 140px
+    }
+    .siemens-detail{
+        left: 250px;
+        width: 190px;
+        top: -90px;
+    }
+    .siemens-firm{
+        width: 60%;
+        margin-right: 70px;
+        margin-left: 0;
+    }
+    .denso-firm{
+        width: 190px;
+        margin-left: 45px;
+        margin-top: 30px;
+    }
+    .denso-detail{
+        left: 250px;
+        width: 170px;
+        top: -59px;
+    }
+
+    .contact-inf{
+        font-size: 18px;
+    }
+    .logo__footer{
+        width: 250px;
+    }
+    .repair{
+        box-shadow: 0 50px 1px rgba(255, 255, 255, 0.5);
+        margin-top: 295px;
+    }
+    .our-services-title::after{
+        width: 100%;
+        height: 180%;
+    }
+    .forsmaster__title{
+        margin-top: 50px;
+        font-size: 40px;
+        line-height: 55px;
+    }
+
+    .request{
+        width: 100%;
+        height: 100%; 
+        margin: 0;
+        top: 0;
+        left: 0;
+    }
+    .request-text{
+        padding: 20px 0;
+    }
+    .request-title{
+        padding: 5px 35px;
+    }
+    .request-button{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .fa-times{
+        margin-right: 15px;
+    }
+    .form{
+        padding-bottom: 5px;
+    }
+    .request-form__text{
+        padding: 10px 35px 5px;
+    }
+    .stay-request{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .mob__link{
+        font-weight: 600;
+        font-size: 33px;
+        line-height: 45px;
+    }
+}
+
+
+@media only screen and (max-width: 414px){
+    .repair{
+        margin-top: 190px;
+    }
+    .bosch-firm{
+        width: 200px;
+        margin-left: 40px;
+        margin-top: 80px;
+    }
+    .bosch-detail{
+        width: 130px;
+        top: 15px;
+        left: 250px;
+    }
+
+    .bosch-piezo-detail{
+        width: 130px;
+        top: 12px;
+        left: 250px;
+    }
+    .image-bosch-piezo{
+        width: 200px;
+        margin-top: 80px;
+    }
+    .bosch-piezo{
+        font-size: 30px;
+        line-height: 30px;
+        margin-left: 10px;
+    }
+    .delphi-detail{
+        width: 90px;
+        left: 250px;
+        top: 17px
+    }
+    .delphi-firm{
+        width: 200px;
+        margin-top: 90px;
+        padding-left: 60px;
+    }
+    .siemens-detail{
+        width: 120px;
+        top: 18px;
+    }
+    .siemens-firm{
+        margin-top: 100px;
+        height: 70%;
+    }
+    .denso-detail{
+        top: 35px;
+        width: 110px;
+    }
+    .denso-firm{
+        width: 180px;
+        margin-top: 90px;
+    }
+    .forsmaster{
+        background: linear-gradient(to top, #201D1D 70%, transparent 90%), url('../images/background-forsmaster.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .forsmaster-title{
+        font-size: 33px;
+        line-height: 50px;
+        padding-bottom: 0;
+    }
+    .contact-item{
+        height: 30px;
+    }
+    .contact-inf{
+        font-size: 15px;
+    }
+    .mob__link{
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 43px;
+    }
+    
+}
+ 
+
+
+@media only screen and (max-width: 350px){
+    .title-about{
+        font-size: 23px;
+        line-height: 30px;
+    }
+    .burger{
+        padding: 10px 15px 10px 20px;
+    }
+    .header__about-title{
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .bosch-firm{
+        width: 130px;
+        margin-left: 40px;
+        margin-top: 90px;
+    }
+    .bosch-detail{
+        width: 130px;
+        left: 170px;
+    } 
+    .bosch-piezo-detail{
+        width: 120px;
+        top: 25px;
+        left: 180px;
+    }
+    .image-bosch-piezo{
+        width: 130px;
+        margin-left: 0;
+    }
+    .bosch-piezo{
+        font-size: 18px;
+        line-height: 30px;
+        margin-left: 0;
+    }
+    .delphi-detail{
+        width: 90px;
+        left: 200px;
+        top: 20px
+    }
+    .delphi-firm{
+        width: 170px;
+        left: -20px;
+    }
+    .siemens-detail{
+        width: 120px;
+        left: 180px;
+        top: 19px;
+    }
+    .siemens-firm{
+        width: 45%;
+        margin-right: 125px;
+    }
+    .denso-detail{
+        left: 200px;
+        top: 50px;
+        width: 100px;
+    }
+    .denso-firm{
+        width: 130px;
+        top: 90px;
+        padding-left: 0;
+    }
+    .title-section{
+        font-size: 30px;
+    }
+
+    .repair__button-link{
+        padding: 0;
+    }
+
+    .forsmaster{
+        background: linear-gradient(to top, #201D1D 65%, transparent 80%), url('../images/background-forsmaster.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .forsmaster__inner{
+        padding: 100px 30px 0;
+    }
+    .forsmaster__text{
+        line-height: 30px;
+    }
+    .forsmaster-title{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .logo__footer{
+        width: 200px;
+    }
+    .contact-img{
+        width: 33px;
+    }
+    .contact-item{
+        margin-top: 10px;
+    }
+    .contact-inf{
+        font-size: 10px;
+    }
+    .mob__link{
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 35px;
+    }
+  
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

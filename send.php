@@ -3,11 +3,11 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 $mail = $_POST['mail'];
 
-$to = "vakulka95@gmail.com";
+$to = "forssmaster@gmail.com";
 
 $subject = "Заявка із сайту";
 $message = "
-Отримали лист від нового клієнта.<br>
+Ви отримали лист від нового клієнта. Зв’яжіться з ним! <br>
 Ім’я: ".htmlspecialchars($name)."<br>
 Телефон: ".htmlspecialchars($phone)."<br>
 Email: ".htmlspecialchars($mail);
