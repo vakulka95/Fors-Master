@@ -71,7 +71,7 @@ ul, li{
 
 /* HEADER-TOP */
 
-.header{
+.hero{
     background-image: linear-gradient(90deg, #201D1D 15.16%, rgba(32, 29, 29, 0) 99.85%), url('../images/background.png');
     background-repeat: no-repeat;
     position: relative;
@@ -81,10 +81,10 @@ ul, li{
     height: 100%;
 }
 
-.header::before{
+.hero::before{
     content: '';
     position: absolute;
-    background-image: url('/images/fog.png');
+    background-image: url('../images/fog.png');
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -170,21 +170,21 @@ ul, li{
 }
 
 
-.header__content{
+.hero__content{
     padding-bottom: 55px;
     position: relative;
 }
 
-.header__content-inner{
+.hero__content-inner{
     display: flex;
     padding-top: 150px;
 }
 
-.header__about{
+.hero__about{
     padding-top: 30px;
 }
 
-.header__about-title{
+.hero__about-title{
     font-style: italic;
     font-weight: 900;
     font-size: 50px;
@@ -198,7 +198,7 @@ ul, li{
     color: #fff;
 }
 
-.header__about-subtitle{
+.hero__about-subtitle{
     font-style: italic;
     font-weight: normal;
     font-size: 32px;
@@ -215,15 +215,13 @@ ul, li{
     opacity: 0.8;
 }
 
-.request-button, .main-button{
+.request-button, .main-button, .ok-btn{
     background-color: #E8363A;
 }
 
-.request-button:hover, .main-button:hover{
+.request-button:hover, .main-button:hover, .ok-btn:hover{
     box-shadow: 0 7px 20px #E8363A;
 }
-
-
 
 .services{
     background-color: #E5E5E5;
@@ -232,7 +230,7 @@ ul, li{
 
 .title{
     text-align: center;
-    margin: 124px 0 80px;
+    margin: 65px 0 80px;
 }
 
 .title-section{
@@ -247,9 +245,6 @@ ul, li{
     color: #262323;
 
     padding-bottom: 17px;
-}
-.our-services-title{
-    padding-top: 100px;
 }
 
 
@@ -317,7 +312,24 @@ ul, li{
     color: #E8363A;
     padding: 5px 70px;
 }
+.repair__order{
+    display: flex;
+    align-items: center;
+}
+.repair__price{
+    margin-left: 25px;
+    margin-top: 5px;
+}
+.price{
+    font-style: italic;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 40px;
 
+    letter-spacing: 0.06em;
+
+    color: #E8363A;
+}
 .images{
     margin: auto 45px auto 0 ;
     width: 40%;
@@ -401,7 +413,7 @@ ul, li{
     background: linear-gradient(90deg, #201D1D 15%, rgba(32, 29, 29, 0) 120%), url('../images/background-forsmaster.png');
     background-color: #201D1D;
     background-repeat: no-repeat;
-    padding: 165px 0;
+    padding: 165px 0 50px;
     background-position: 300px;
     background-size: cover;
 }
@@ -445,7 +457,7 @@ span{
 
 
 .benefits{
-    padding-bottom: 172px;
+    padding-bottom: 192px;
     padding-top: 25px;
 }
 
@@ -545,6 +557,7 @@ span{
     align-items: center;
     text-align: center;
     color: #fff;
+    padding: 53px;
 }
 
 .header-stage{
@@ -654,14 +667,12 @@ span{
 .request{
     display: none;
     position: fixed;
-    width: 42%;
-    height: 70%;
+    width: 35%;
     background-color: #fff;
     z-index: 51;
-    left: 30%;
+    left: 36%;
     text-align: center;
-    overflow-y: scroll;
-    margin: 5% 0;
+    margin: 75px auto;
 }
 
 .request__close{
@@ -699,17 +710,22 @@ span{
     width: 100%;
     padding: 5px 0;
     background-color: #F3F3F3;
-
+}
+.request-phone{
+    display: block;
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 40px;
+    font-size: 25px;
+    line-height: 60px;
 
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    text-decoration: none;
 
     color: #262323;
-
+}
+.request-phone:hover{
+    text-decoration: underline;
 }
 
 
@@ -722,13 +738,15 @@ span{
     letter-spacing: 0.04em;
 
     color: #262323;
-    padding: 26px 36px 26px;
+    padding: 26px 26px 26px;
 }
+
+
 
 
 .form{
     background-color: #F3F3F3;
-    padding: 25px 56px;
+    padding: 25px 25px;
 
     font-style: normal;
     font-weight: 500;
@@ -782,9 +800,29 @@ span{
     letter-spacing: 0.04em;
 
     color: #696868;
-    padding: 25px 133px;
+    padding: 25px 60px;
+}
+.repair-request, .selection{
+    height: 450px;
 }
 
+.ok-btn{
+    width: 80%;
+    margin: 30px 0;
+    padding: 0;
+}
+
+.request-thank{
+    left: 37%;
+    width: 25%;
+    padding: 20px 0;
+}
+
+.request-thank .request-title{
+    margin-top: 15px;
+    font-size: 40px;
+    line-height: 60px;
+}
 
 @media only screen and (max-width: 1199px){
     .container{
@@ -820,6 +858,21 @@ span{
     .footer{
         padding: 15px 0 0;
     }
+    .stage-circle{
+        width: 96px;
+    }
+    .repair-request, .selection{
+        height: 450px;
+    }
+    .request{
+        width: 450px;
+        left: 30%;
+    }
+    .request-thank .request-title{
+        margin-top: 15px;
+        font-size: 30px;
+        line-height: 40px;
+    }
 }
 
 @media only screen and (max-width: 991px){
@@ -831,6 +884,9 @@ span{
     }
     .header__btn{
         display: none;
+    }
+    .logo__img{
+        width: 65%;
     }
     .header__top{
         display: flex;
@@ -888,25 +944,25 @@ span{
     }
 
     
-    .header::before{
+    .hero::before{
         display: none;
     }
-    .header{
+    .hero{
         background-image: 
             linear-gradient(to bottom, #201D1D 6%, transparent 50%), 
             linear-gradient(to top, #201D1D 15%, transparent 40%),
             url('../images/mobile/mob_background.png');
     }
 
-    .header__content-graphic{
+    .hero__content-graphic{
         display: none;
     }
-    .header__about{
+    .hero__about{
         width: 100%;
         text-align: center;
         padding: 0 35px;
     }
-    .header__about-title{
+    .hero__about-title{
         font-size: 60px;
         line-height: 80px;
     }
@@ -928,8 +984,12 @@ span{
     .text-about{
         font-size: 18px;
     }
+    .repair__button{
+        width: 50%;
+    }
     .repair__button-link{
         width: 100%;
+        text-align: center;
     }
     .our-services-title{
         margin-bottom: 30px;
@@ -939,9 +999,9 @@ span{
         position: absolute;
         content: '';
         width: 100%;
-        height: 200%;
+        height: 180%;
         left: 0;
-        top: -125px;
+        top: -62px;
         z-index: -50;
         background-color: rgba(255, 255, 255, 0.5);
     }
@@ -961,6 +1021,9 @@ span{
     .repair__image{
         position: absolute;
         top: -200px;
+    }
+    .repair__price{
+        width: 50%;
     }
     
     .image-detail{
@@ -1004,7 +1067,8 @@ span{
         top: -120px;
     }
     .siemens-firm{
-        width: 500px;
+        height: 100%;
+        width: 100%;
         margin-left: 60px;
     }
     .denso-detail{
@@ -1015,18 +1079,17 @@ span{
         margin-left: 45px;
     }
 
-    .forsmaster__inner{
-        width: 100%;
-    }
+    
     .forsmaster{
         background: linear-gradient(to top, #201D1D 60%, transparent 80%), url('../images/background-forsmaster.png');
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 265px 0 50px 0;
         background-position: center;
     }
     .forsmaster__inner{
-        padding: 0 35px;
+        padding: 0 35px 15px;
+        width: 100%;
+
     }
     .forsmaster__title{
         font-size: 36px;
@@ -1108,15 +1171,16 @@ span{
         padding: 30px 35px;
     }
     .request{
-        margin: 10% auto;
-        width: 50%;
-        height: 60%;
+        left: 26%;
     }
     .request-text{
-        padding: 20px 0;
+        padding: 20px 35px;
     }
     .request-title{
         padding: 20px 35px;
+    }
+    .request__button{
+        padding: 0 25px;
     }
     .request-button{
         width: 100%;
@@ -1129,7 +1193,10 @@ span{
         margin-right: 0;
     }
     .request-form__text{
-        padding: 35px;
+        padding: 25px;
+    }
+    .repair-request, .selection{
+        height: 450px;
     }
     
 }
@@ -1189,6 +1256,9 @@ span{
         width: 350px;
         margin-left: 45px;
     }
+    .repair-request, .selection{
+        height: 470px;
+    }
 }
 
 @media only screen and (max-width: 780px){
@@ -1221,6 +1291,12 @@ span{
         height: 70px;
         width: 300px;
         margin: 0 auto;
+    }
+    .repair-request, .selection{
+        height: 470px;
+    }
+    .request{
+        left: 23%;
     }
     
 }
@@ -1267,6 +1343,12 @@ span{
     }
     .footer__contacts{
         padding: 30px 60px;
+    }
+    .request{
+        left: 20%;
+    }
+    .selection, .repair-request{
+        height: 470px;
     }
     
 }
@@ -1322,10 +1404,16 @@ span{
         font-size: 30px;
         line-height: 43px;
     }
-
-
-   
-    
+    .request{
+        width: 100%;
+        height: 100%;
+        top: -10%;
+        left: 0;
+    }
+    .request-thank{
+        top: -5%;
+        padding-top: 20px;
+    }
 }
 
 
@@ -1425,13 +1513,17 @@ span{
         font-size: 30px;
         line-height: 43px;
     }
+    .repair__button-link{
+        font-size: 15px;
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 480px){
     .our-services-title::after{
         height: 240%;
     }
-    .header__about-title{
+    .hero__about-title{
         font-size: 50px;
         line-height: 60px;
     }
@@ -1511,14 +1603,6 @@ span{
         font-size: 40px;
         line-height: 55px;
     }
-
-    .request{
-        width: 100%;
-        height: 100%; 
-        margin: 0;
-        top: 0;
-        left: 0;
-    }
     .request-text{
         padding: 20px 0;
     }
@@ -1546,6 +1630,12 @@ span{
         font-weight: 600;
         font-size: 33px;
         line-height: 45px;
+    }
+    .repair__button-link{
+        padding: 0;
+    }
+    .price{
+        font-size: 25px;
     }
 }
 
@@ -1618,6 +1708,7 @@ span{
     }
     .contact-item{
         height: 30px;
+        margin-top: 10px;
     }
     .contact-inf{
         font-size: 15px;
@@ -1626,6 +1717,9 @@ span{
         font-weight: 600;
         font-size: 30px;
         line-height: 43px;
+    }
+    .request-thank{
+        top: -10%;
     }
     
 }
@@ -1637,10 +1731,14 @@ span{
         font-size: 23px;
         line-height: 30px;
     }
+    .logo__img{
+        height: 45px;
+        width: 80%;
+    }
     .burger{
         padding: 10px 15px 10px 20px;
     }
-    .header__about-title{
+    .hero__about-title{
         font-size: 35px;
         line-height: 45px;
     }
@@ -1720,6 +1818,7 @@ span{
     }
     .logo__footer{
         width: 200px;
+        height: 100%;
     }
     .contact-img{
         width: 33px;
@@ -1734,6 +1833,12 @@ span{
         font-weight: 600;
         font-size: 25px;
         line-height: 35px;
+    }
+    .request-thank{
+        top: -20%;
+    }
+    .price{
+        font-size: 20px;
     }
   
 }  

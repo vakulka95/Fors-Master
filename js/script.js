@@ -13,7 +13,7 @@ const menu = document.querySelector('.menu');
 const menuList = document.querySelector('.menu__list');
 const menuLink = document.querySelectorAll('.menu__list a');
 const body = document.querySelector('body');
-
+const footer = document.querySelector('.footer');
 
 
 
@@ -82,6 +82,8 @@ const callRequest = document.querySelectorAll('.call-request').forEach(el => {
     filter.style.display = 'block';
     selection.style.display = 'block';
     body.style.overflowY = 'hidden';
+    repairRequest.style.overflowY = 'hidden';
+
   }
 });
 
@@ -91,6 +93,7 @@ const repairButtons = document.querySelectorAll('.repair__button-link').forEach(
     filter.style.display = 'block';
     repairRequest.style.display = 'block';
     body.style.overflowY = 'hidden';
+    repairRequest.style.overflowY = 'hidden';
 
   }
 });
@@ -110,9 +113,20 @@ window.onclick = (event) => {
     filter.style.display = 'none';
     repairRequest.style.display = 'none';
     requestForm.style.display = 'none';
+    thankReq.style.display = 'none';
     body.style.overflowY = 'scroll';
 
   }
+}
+
+if(thankReq.style.display === 'block'){
+  thankReq.style.overflowY = 'scroll';
+}
+
+const okBtn = document.querySelector('.ok-btn').onclick = () => {
+  thankReq.style.display = 'none';
+  filter.style.display = 'none';
+  body.style.overflowY = 'scroll';
 }
 
 document.querySelectorAll('.fa-times').forEach(el => {
@@ -121,21 +135,14 @@ document.querySelectorAll('.fa-times').forEach(el => {
     selection.style.display = 'none';
     repairRequest.style.display = 'none';
     requestForm.style.display = 'none';
+    thankReq.style.display = 'none';
     body.style.overflowY = 'scroll';
 
   }
 });
 
-const submitBtn = document.querySelector('.form-btn');
-submitBtn.addEventListener('click', showMessage);
 
-function showMessage(){
-  const input = document.querySelectorAll('.input');
-  input.forEach(el => {
-    if(input.value === null || input.value === ''){
-      alert('Заповніть поля вводу!');
-    }
-  })
-}
+
+
 
 
