@@ -41,7 +41,7 @@
           "openingHours": "Mo, Tu, We, Th, Fr, Sa 09:00-18:00",
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+3 8 (099) 165 94 90",
+            "telephone": "+380 (99) 165 94 90",
             "contactType": "0 (99) 165 94 90"
           }
         }
@@ -52,8 +52,7 @@
 
 <body>
     <!-- Black background for request and form -->
-    <div class="filter"></div>
-
+    <div class="filter">
     <!-- First request -->
     <div class="request selection" id='req-first'>
         <div class="request__close">
@@ -66,14 +65,14 @@
         </div>
         <div class="request__phone">
             <div class="request__container">
-                <p class='request-phone'>+380991659490</p>
-                <p class='request-phone'>+380685482732</p>
+                <a href='tel:+380991659490' class="request-phone" target="_blank">+380991659490</a>
+                <a href="tel:+380685482732" class="request-phone" target="_blank">+380685482732</a>
             </div>
         </div>
         <div class="request__text">
             <p class="request-text stay-request">Або залиште заявку на сайті, й наш фахівець зв'яжеться з Вами за декілька хвилин</p>
         </div>
-        <div class="button">
+        <div class="button request__button">
             <button class="button__link request-button stay-request">Залишити заявку</button>
         </div> <!-- button -->
     </div>
@@ -89,8 +88,8 @@
         </div>
         <div class="request__phone">
             <div class="request__container">
-                <p class='request-phone'>+380991659490</p>
-                <p class='request-phone'>+380685482732</p>
+                <a href='tel:+380991659490' class="request-phone" target="_blank">+380991659490</a>
+                <a href="tel:+380685482732" class="request-phone" target="_blank">+380685482732</a>
             </div>
         </div>
         <div class="request__text">
@@ -99,7 +98,7 @@
                     докладнішої інформації щодо ремонту форсунки</p>
             </div>
         </div>
-        <div class="button">
+        <div class="button request__button">
             <button class="button__link request-button stay-request">Залишити заявку</button>
         </div> <!-- button -->
     </div>
@@ -117,16 +116,16 @@
         <form class="form" action='send.php' method="POST">
             <div class="request__container">
                 <p class='title-input'>Ваше ім'я:</p>
-                <input type="text" name="name" class='input' placeholder="Микола">
+                <input type="text" name="name" class='input form-name' placeholder="Микола" required>
 
                 <p class='title-input'>Ваш номер телефону:</p>
-                <input type="text" name="phone" class='input' placeholder="063 000 00 00">
+                <input type="text" name="phone" class='input form-phone' placeholder="063 000 00 00" required>
 
                 <p class='title-input'>Ваша електронна адреса:</p>
-                <input type="email" name="mail" class='input' placeholder="example@gmail.com">
+                <input type="email" name="mail" class='input form-mail' placeholder="example@gmail.com" required>
 
                 <div class="button">
-                    <button class="button__link request-button form-btn" type="submit">Надіслати</button>
+                    <button class="button__link request-button submit-btn" type="submit">Надіслати</button>
                 </div> <!-- button -->
             </div>
         </form>
@@ -134,6 +133,9 @@
             <p class="request-form__text">Коли Ви надсилаєте заявку, Ви даєте згоду на обробку Ваших особистих даних.</p>
         </div>
     </div>
+    
+   
+</div>
 
     <div class="mob__block">
         <nav class="mob__nav">
@@ -156,13 +158,13 @@
             </ul>
         </nav>
     </div>
-    <header class="header section" id='head'>
+    <header class="header">
         <div class="header__top">
             <div class="container header__container">
                 <div class="header__top-inner">
                     <div class="logo">
                         <a class="logo__link" href="#head">
-                            <img class="logo__img" src="images/logo.png" alt="logo">
+                            <img class="logo__img" src="images/logo.png" alt="header-logo-fors-master">
                         </a>
                     </div> <!-- logo -->
                     <nav class="menu">
@@ -197,24 +199,24 @@
             </div>
             <!-- <div class="mob__menu"></div> -->
         </div> <!-- header__top -->
-        <div class="header__content">
-            <div class="container">
-                <div class="header__content-inner">
-                    <div class="header__about">
-                        <h1 class="header__about-title">Діагностика та ремонт дизельних форсунок <br> в Україні</h1>
-                        <p class='header__about-subtitle'>Запасні частини до паливної апаратури</p>
-                        <div class="button">
-                            <button class="button__link call-request main-button btn-about">Підбір
-                                запчастин</button>
-                        </div> <!-- button -->
-                    </div>
-                    <div class="header__content-graphic">
-                        <img class='header__content-image' src="images/ingine.png" alt="ingine">
-                    </div> <!-- header__content-graphic -->
-                </div> <!-- header__content-inner -->
-            </div>
-        </div> <!-- header__content -->
     </header>
+    <section class="hero hero__content section" id='head'>
+        <div class="container">
+            <div class="hero__content-inner">
+                <div class="hero__about">
+                    <h1 class="hero__about-title">Діагностика та ремонт дизельних форсунок <br> в Україні</h1>
+                    <p class='hero__about-subtitle'>Запасні частини до паливної апаратури</p>
+                    <div class="button">
+                        <button class="button__link call-request main-button btn-about">Підбір
+                            запчастин</button>
+                    </div> <!-- button -->
+                </div>
+                <div class="hero__content-graphic">
+                    <img class='hero__content-image' src="images/ingine.png" alt="hero-ingine">
+                </div> <!-- header__content-graphic -->
+            </div> <!-- header__content-inner -->
+        </div>
+    </section> <!-- header__content -->
     <section class="services section" id='serv'>
         <div class="container container__services">
             <div class="services__inner">
@@ -223,7 +225,7 @@
                 </div>
                 <div class="repair">
                     <div class="border">
-                        <img class='border-image' src="images/border.png" alt="border">
+                        <img class='border-image' src="images/border.png" alt="repair-border">
                     </div>
                     <div class="repair__about">
                         <div class="repair__about-title">
@@ -233,18 +235,23 @@
                             <p class='text-about'>Виконуємо якісний ремонт форсунки із заміною таких оригінальних
                                 запасних частин, як клапан мультиплікатора та розпилювач</p>
                         </div>
-                        <div class="button repair__button">
-                            <button class="button__link repair__button-link">Замовити</button>
-                        </div> <!-- button -->
+                        <div class="repair__order">
+                            <div class="button repair__button">
+                                <button class="button__link repair__button-link">Замовити</button>
+                            </div> <!-- button -->
+                            <div class="repair__price">
+                                <p class="price">від 500 грн</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="images repair__image">
-                        <img class="image-firm bosch-firm" src="images/BoschFirm.png" alt="firm1">
-                        <img class="image-detail bosch-detail" src="images/BoschDetail.png" alt="detail1">
+                        <img class="image-firm bosch-firm" src="images/BoschFirm.png" alt="bosch-emblem">
+                        <img class="image-detail bosch-detail" src="images/BoschDetail.png" alt="bosch-detail">
                     </div>
                 </div>
                 <div class="repair">
                     <div class="border">
-                        <img class='border-image' src="images/border.png" alt="border">
+                        <img class='border-image' src="images/border.png" alt="repair-border">
                     </div>
                     <div class="repair__about">
                         <div class="repair__about-title">
@@ -253,21 +260,26 @@
                         <div class='repair__about-text'>
                             <p class='text-about'>Якісна реставрація запасних частин форсунки із заміною за необхідності. Присвоєння нового коду форсунки на сертифікованому обладнані</p>
                         </div>
-                        <div class="button repair__button">
-                            <button class="button__link repair__button-link">Замовити</button>
-                        </div> <!-- button -->
+                        <div class="repair__order">
+                            <div class="button repair__button">
+                                <button class="button__link repair__button-link">Замовити</button>
+                            </div> <!-- button -->
+                            <div class="repair__price">
+                                <p class="price">від 900 грн</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="images repair__image odd">
                         <div class="images__bosch-piezo">
-                            <img class="image-firm image-bosch-piezo" src="images/BoschFirm.png" alt="firm1">
+                            <img class="image-firm image-bosch-piezo" src="images/BoschFirm.png" alt="bosch-piezo-emblem">
                             <p class='bosch-piezo'>piezo</p>
                         </div>
-                        <img class="image-detail bosch-piezo-detail odd-image" src="images/BoschPiezoDetail.png" alt="detail1">
+                        <img class="image-detail bosch-piezo-detail odd-image" src="images/BoschPiezoDetail.png" alt="bosch-piezo-detail">
                     </div>
                 </div>
                 <div class="repair">
                     <div class="border">
-                        <img class='border-image' src="images/border.png" alt="border">
+                        <img class='border-image' src="images/border.png" alt="repair-border">
                     </div>
                     <div class="repair__about">
                         <div class="repair__about-title">
@@ -277,18 +289,23 @@
                             <p class='text-about'>Виконуємо заміну запасних частин форсунки виключно
                                 оригінального виробника з присвоєнням нового коду C2I/C3I</p>
                         </div>
-                        <div class="button repair__button">
-                            <button class="button__link repair__button-link">Замовити</button>
-                        </div> <!-- button -->
+                        <div class="repair__order">
+                            <div class="button repair__button">
+                                <button class="button__link repair__button-link">Замовити</button>
+                            </div> <!-- button -->
+                            <div class="repair__price">
+                                <p class="price">від 700 грн</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="images repair__image">
-                        <img class="image-firm delphi-firm" src="images/DelphiFirm.png" alt="firm1">
-                        <img class="image-detail delphi-detail" src="images/DelphiDetail.png" alt="detail1">
+                        <img class="image-firm delphi-firm" src="images/DelphiFirm.png" alt="delphi-emblem">
+                        <img class="image-detail delphi-detail" src="images/DelphiDetail.png" alt="delphi-detail">
                     </div>
                 </div>
                 <div class="repair">
                     <div class="border">
-                        <img class='border-image' src="images/border.png" alt="border">
+                        <img class='border-image' src="images/border.png" alt="repair-border">
                     </div>
                     <div class="repair__about  repair-siemens">
                         <div class="repair__about-title">
@@ -298,18 +315,23 @@
                             <p class='text-about'>Виконуємо заміну пєзоелектричної частини форсунки з подальшим
                                 регулюванням на сертифікованому обладнанні й присвоєнням нового IMA коду</p>
                         </div>
-                        <div class="button repair__button">
-                            <button class="button__link repair__button-link">Замовити</button>
-                        </div> <!-- button -->
+                        <div class="repair__order">
+                            <div class="button repair__button">
+                                <button class="button__link repair__button-link">Замовити</button>
+                            </div> <!-- button -->
+                            <div class="repair__price">
+                                <p class="price">від 700 грн</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="images repair__image odd">
-                        <img class="image-firm siemens-firm" src="images/SiemensFirm.png" alt="firm1">
-                        <img class="image-detail siemens-detail" src="images/SiemensDetail.png" alt="detail1">
+                        <img class="image-firm siemens-firm" src="images/SiemensFirm.png" alt="siemens-emblem">
+                        <img class="image-detail siemens-detail" src="images/SiemensDetail.png" alt="siemens-detail">
                     </div>
                 </div>
                 <div class="repair">
                     <div class="border">
-                        <img class='border-image' src="images/border.png" alt="border">
+                        <img class='border-image' src="images/border.png" alt="repair-border">
                     </div>
                     <div class="repair__about">
                         <div class="repair__about-title">
@@ -319,13 +341,46 @@
                             <p class='text-about'>Після діагностичних робіт, за потреби, виконуємо заміну клапана та
                                 розпилювача форсунки</p>
                         </div>
-                        <div class="button repair__button">
-                            <button class="button__link repair__button-link">Замовити</button>
-                        </div> <!-- button -->
+                        <div class="repair__order">
+                            <div class="button repair__button">
+                                <button class="button__link repair__button-link">Замовити</button>
+                            </div> <!-- button -->
+                            <div class="repair__price">
+                                <p class="price">від 800 грн</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="images repair__image">
-                        <img class="image-firm denso-firm" src="images/DensoFirm.png" alt="firm1">
-                        <img class="image-detail denso-detail" src="images/DensoDetail.png" alt="detail1">
+                        <img class="image-firm denso-firm" src="images/DensoFirm.png" alt="denso-emblem">
+                        <img class="image-detail denso-detail" src="images/DensoDetail.png" alt="denso-detail">
+                    </div>
+                </div>
+                <div class="repair">
+                    <div class="border">
+                        <img class='border-image' src="images/border.png" alt="repair-border">
+                    </div>
+                    <div class="repair__about">
+                        <div class="repair__about-title">
+                            <p class="title-about">Ремонт насос-форсунок Bosch / Siemens</p>
+                        </div>
+                        <div class='repair__about-text'>
+                            <p class='text-about'>Виконуємо ремонт насос-форсунок Bosch, Siemens із заміною всіх запасних частин та ущільнюючих кілець</p>
+                        </div>
+                        <div class="repair__order">
+                            <div class="button repair__button">
+                                <button class="button__link repair__button-link">Замовити</button>
+                            </div> <!-- button -->
+                            <div class="repair__price">
+                                <p class="price">від 600 грн</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="images repair__image">
+                        <div class="images__siemens-bosch">
+                            <img class="image-firm siemens-firm" src="images/SiemensFirm.png" alt="siemens-emblem">
+                            <img class="image-firm bosch-firm" src="images/BoschFirm.png" alt="bosch-piezo-emblem">
+                        </div>
+                        <img class="image-detail siemens-bosch-detail" src="images/Siemens-BoschDetail.png" alt="siemens and bosch pump">
                     </div>
                 </div>
             </div>
@@ -357,7 +412,7 @@
                 <div class="benefits__columns">
                     <div class="our-benefit">
                         <div class="our-benefit__image">
-                            <img class='benefit-image' src="images/Benefits/clock.png" alt="clock">
+                            <img class='benefit-image' src="images/Benefits/clock.png" alt="benefit-clock">
                         </div>
                         <div class="our-benefit__title">
                             <p class='benefit-title'>Зремонтуємо в день звернення</p>
@@ -369,7 +424,7 @@
                     </div>
                     <div class="our-benefit">
                         <div class="our-benefit__image">
-                            <img class='benefit-image' src="images/Benefits/guaranty.png" alt="clock">
+                            <img class='benefit-image' src="images/Benefits/guaranty.png" alt="benefit-check-mark">
                         </div>
                         <div class="our-benefit__title">
                             <p class='benefit-title'>Гарантія на виконану роботу</p>
@@ -382,7 +437,7 @@
                     <div class="our-benefit">
                         <div class="our-benefit__image">
                             <img class='benefit-image our-benefit__discount' src="images/Benefits/discount.png"
-                                alt="clock">
+                                alt="benefit-percent">
                         </div>
                         <div class="our-benefit__title">
                             <p class='benefit-title'>Ціни на 23% <br>нижче ринкових</p>
@@ -393,7 +448,7 @@
                     </div>
                     <div class="our-benefit">
                         <div class="our-benefit__image">
-                            <img class='benefit-image our-benefit__car' src="images/Benefits/car.png" alt="clock">
+                            <img class='benefit-image our-benefit__car' src="images/Benefits/car.png" alt="benefit-car">
                         </div>
                         <div class="our-benefit__title">
                             <p class='benefit-title'>Працюємо з усіма марками автомобілів</p>
@@ -404,7 +459,7 @@
                     </div>
                     <div class="our-benefit">
                         <div class="our-benefit__image">
-                            <img class='benefit-image' src="images/Benefits/terms.png" alt="clock">
+                            <img class='benefit-image' src="images/Benefits/terms.png" alt="benefit-money">
                         </div>
                         <div class="our-benefit__title">
                             <p class='benefit-title'>Вигідні умови для постійних клієнтів</p>
@@ -416,7 +471,7 @@
                     <div class="our-benefit">
                         <div class="our-benefit__image">
                             <img class='benefit-image our-benefit__support' src="images/Benefits/support.png"
-                                alt="clock">
+                                alt="benefit-support">
                         </div>
                         <div class="our-benefit__title">
                             <p class='benefit-title'>Безкоштовна консультація фахівця</p>
@@ -513,39 +568,42 @@
                 <div class="footer__contacts">
                     <div class="logo">
                         <a class="logo__link" href="#">
-                            <img class="logo__img logo__footer" src="images/logo.png" alt="logo">
+                            <img class="logo__img logo__footer" src="images/logo.png" alt="footer-logo-fors-master">
                         </a>
                     </div>
                     <div class="contacts-list">
                         <ul>
                             <li class='contact-item'>
-                                <img class='contact-img' src="images/Contacts/Telephone.png" alt="phone">
+                                <img class='contact-img' src="images/Contacts/Telephone.png" alt="contact-phone">
                                 <a href='tel:+380991659490' class="contact-inf" target="_blank">0 (99) 165 94 90</a>
                             </li>
                             <li class='contact-item'>
-                                <img class='contact-img' src="images/Contacts/Telephone.png" alt="phone">
+                                <img class='contact-img' src="images/Contacts/Telephone.png" alt="contact-phone">
                                 <a href="tel:+380685482732" class="contact-inf" target="_blank">0 (68) 548 27 32</a>
                             </li>
                             <li class='contact-item'>
-                                <img class='contact-img' src="images/Contacts/mail.png" alt="phone">
+                                <img class='contact-img' src="images/Contacts/mail.png" alt="contact-mail">
                                 <a href="mailto:forssmaster@gmail.com" class="contact-inf" target="_blank">forssmaster@gmail.com</a>
                             </li>
                             <li class='contact-item'>
-                                <img class='contact-img' src="images/Contacts/Geo.png" alt="phone">
-                                <a href='https://www.google.com/maps/place/46A,+%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%9D%D0%B0%D0%B4%D1%80%D1%96%D1%87%D0%BD%D0%B0,+46%D0%90,+%D0%86%D0%B2%D0%B0%D0%BD%D0%BE-%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA,+%D0%86%D0%B2%D0%B0%D0%BD%D0%BE-%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+76000/@48.942951,24.7178645,17z/data=!3m1!4b1!4m5!3m4!1s0x4730c1a46fcc2ebf:0xfd962e2581476f10!8m2!3d48.9429475!4d24.7200532' class="contact-inf" target="_blank">м.Івано- Франківськ, Надрічна 46В</a>
+                                <img class='contact-img' src="images/Contacts/Geo.png" alt="contact-adres">
+                                <a href='https://www.google.com.ua/maps/place/Fors+master/@48.9411806,24.7150488,17.78z/data=!4m5!3m4!1s0x4730c16c3bfdd797:0xb5aca4e0a49139eb!8m2!3d48.9411657!4d24.7162492?hl=uk' class="contact-inf" target="_blank">м.Івано- Франківськ, Надрічна 46В (територія Sun Lit)</a> 
+
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="iframe100 small">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2620.5532196498516!2d24.71786451509091!3d48.94295100270383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c1a46fcc2ebf%3A0xfd962e2581476f10!2zNDZBLCDRg9C7LiDQndCw0LTRgNC10YfQvdCw0Y8sIDQ20JAsINCY0LLQsNC90L4t0KTRgNCw0L3QutC-0LLRgdC6LCDQmNCy0LDQvdC-LdCk0YDQsNC90LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDc2MDAw!5e0!3m2!1sru!2sua!4v1594362169637!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="allowfullscreen" aria-hidden="false" tabindex="0"></iframe>
+                    <img src="images/photo.jpg" alt="photo">
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2620.6469639945567!2d24.714060516160487!3d48.941165679295814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c16c3bfdd797%3A0xb5aca4e0a49139eb!2sFors%20master!5e0!3m2!1suk!2sua!4v1594747727139!5m2!1suk!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="allowfullscreen" aria-hidden="false" tabindex="0"></iframe> -->
                 </div>   
             </div>
         </div>
     </footer>
-
+    <script src="js/require.js"></script>
     <script src="js/script.js"></script>
     <script src="js/mobile_script.js"></script>
 </body>
 
 </html>
+

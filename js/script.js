@@ -113,21 +113,23 @@ window.onclick = (event) => {
     filter.style.display = 'none';
     repairRequest.style.display = 'none';
     requestForm.style.display = 'none';
-    thankReq.style.display = 'none';
     body.style.overflowY = 'scroll';
 
   }
 }
 
-if(thankReq.style.display === 'block'){
-  thankReq.style.overflowY = 'scroll';
+// if(thankReq.style.display === 'block'){
+//   thankReq.style.overflowY = 'scroll';
+// }
+
+const okBtn = document.querySelector('.ok-btn');
+if(okBtn){
+  okBtn.onclick = () => {
+    filter.style.display = 'none';
+    body.style.overflowY = 'scroll';
+  }
 }
 
-const okBtn = document.querySelector('.ok-btn').onclick = () => {
-  thankReq.style.display = 'none';
-  filter.style.display = 'none';
-  body.style.overflowY = 'scroll';
-}
 
 document.querySelectorAll('.fa-times').forEach(el => {
   el.onclick = () => {
@@ -135,7 +137,6 @@ document.querySelectorAll('.fa-times').forEach(el => {
     selection.style.display = 'none';
     repairRequest.style.display = 'none';
     requestForm.style.display = 'none';
-    thankReq.style.display = 'none';
     body.style.overflowY = 'scroll';
 
   }
